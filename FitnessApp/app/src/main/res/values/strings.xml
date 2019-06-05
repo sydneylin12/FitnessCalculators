@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Fitness Calculators</string>
+
+    <string-array name="mult">
+        <item>1.0 - BMR</item>
+        <item>1.2 - Sedentary</item>
+        <item>1.375 - Light Exercise/Sports</item>
+        <item>1.55 - Moderate Exercise/Sports</item>
+        <item>1.725 - Heavy Exercise/Sports</item>
+        <item>1.9 - Very Heavy Exercise/Physical Job</item>
+    </string-array>
+    <string name="title_activity_dashboard">dashboardActivity</string>
+</resources>
