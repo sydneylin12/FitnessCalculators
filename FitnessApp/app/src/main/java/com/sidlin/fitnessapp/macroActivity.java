@@ -14,27 +14,29 @@ public class MacroActivity extends AppCompatActivity {
     private Button macroBtn;
     private boolean testErrorCheckMacroFilled, testErrorCheckPercent;
     private int percentCarbs, percentFat, percentProtein, cals, total;
-
+    private EditText carbsEditTxt, proteinEditTxt, fatEditTxt, calsEditTxt;
+    private TextView carbsTxtView, proteinTxtView, fatTxtView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_macro);
-        setTitle("Macronutrient Calculator");
-
         macroBtn = (Button) findViewById(R.id.macroBtn);
+
+        /*
+        Initialize data members that are a part of the layout
+         */
+        carbsEditTxt = (EditText) findViewById(R.id.carbsEditTxt);
+        proteinEditTxt = (EditText) findViewById(R.id.proteinEditTxt);
+        fatEditTxt = (EditText) findViewById(R.id.fatEditTxt);
+        calsEditTxt = (EditText) findViewById(R.id.calsEditTxt);
+        carbsTxtView = (TextView) findViewById(R.id.carbsTxtView);
+        proteinTxtView = (TextView) findViewById(R.id.proteinTxtView);
+        fatTxtView = (TextView) findViewById(R.id.fatTxtView);
+
         macroBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText carbsEditTxt = (EditText) findViewById(R.id.carbsEditTxt);
-                EditText proteinEditTxt = (EditText) findViewById(R.id.proteinEditTxt);
-                EditText fatEditTxt = (EditText) findViewById(R.id.fatEditTxt);
-                EditText calsEditTxt = (EditText) findViewById(R.id.calsEditTxt);
-
-                TextView carbsTxtView = (TextView) findViewById(R.id.carbsTxtView);
-                TextView proteinTxtView = (TextView) findViewById(R.id.proteinTxtView);
-                TextView fatTxtView = (TextView) findViewById(R.id.fatTxtView);
-
                 //checks percentage
                 testErrorCheckMacroFilled = false;
                 testErrorCheckPercent = false;

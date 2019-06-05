@@ -37,7 +37,7 @@ public class PopActivity extends AppCompatActivity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width*.8), (int)(height*.6)); //adjust to fix clicking out of popup bugs
+        getWindow().setLayout((int)(width*.8), (int)(height*.65)); //adjust to fix clicking out of popup bugs
 
         WindowManager.LayoutParams params = getWindow().getAttributes();
         params.gravity = Gravity.CENTER;

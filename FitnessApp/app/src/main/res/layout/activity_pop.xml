@@ -5,7 +5,8 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:background="@drawable/pop_bg"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingBottom="20dp">
 
     <TextView
         android:layout_width="wrap_content"
@@ -13,7 +14,7 @@
         android:layout_gravity="center"
         android:paddingTop="20dp"
         android:text="Add an Entry"
-        android:textColor="#FFFFFF"
+        android:textColor="#000"
         android:textSize="30dp" />
 
     <EditText
@@ -22,7 +23,7 @@
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:textAlignment="center"
-        android:textColorHint="#FFF"
+        android:textColorHint="#000"
         android:inputType="text"
         android:hint="Enter Food"/>
 
@@ -32,7 +33,7 @@
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:textAlignment="center"
-        android:textColorHint="#FFF"
+        android:textColorHint="#000"
         android:inputType="number"
         android:hint="Enter Protein"/>
 
@@ -42,7 +43,7 @@
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:textAlignment="center"
-        android:textColorHint="#FFF"
+        android:textColorHint="#000"
         android:inputType="number"
         android:hint="Enter Carbs"/>
 
@@ -52,7 +53,7 @@
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:textAlignment="center"
-        android:textColorHint="#FFF"
+        android:textColorHint="#000"
         android:inputType="number"
         android:hint="Enter Fat"/>
 
@@ -62,7 +63,7 @@
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:textAlignment="center"
-        android:textColorHint="#FFF"
+        android:textColorHint="#000"
         android:inputType="number"
         android:hint="Enter Servings"/>
 
@@ -71,6 +72,7 @@
         android:layout_width="160dp"
         android:layout_height="60dp"
         android:text="Add Entry"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:paddingBottom="10dp"/>
 
 </LinearLayout>
