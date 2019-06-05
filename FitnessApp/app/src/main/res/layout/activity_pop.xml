@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@drawable/pop_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="20dp"
+        android:text="Add an Entry"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/addName"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColorHint="#FFF"
+        android:inputType="text"
+        android:hint="Enter Food"/>
+
+    <EditText
+        android:id="@+id/addPro"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColorHint="#FFF"
+        android:inputType="number"
+        android:hint="Enter Protein"/>
+
+    <EditText
+        android:id="@+id/addCarb"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColorHint="#FFF"
+        android:inputType="number"
+        android:hint="Enter Carbs"/>
+
+    <EditText
+        android:id="@+id/addFat"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColorHint="#FFF"
+        android:inputType="number"
+        android:hint="Enter Fat"/>
+
+    <EditText
+        android:id="@+id/addServ"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColorHint="#FFF"
+        android:inputType="number"
+        android:hint="Enter Servings"/>
+
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:text="Add Entry"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.sidlin.fitnessapp.R;
 
-public class macroActivity extends AppCompatActivity {
+public class MacroActivity extends AppCompatActivity {
 
     private Button macroBtn;
     private boolean testErrorCheckMacroFilled, testErrorCheckPercent;

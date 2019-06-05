@@ -11,7 +11,7 @@ import com.sidlin.fitnessapp.R;
 
 import org.w3c.dom.Text;
 
-public class bmiActivity extends AppCompatActivity {
+public class BmiActivity extends AppCompatActivity {
 
     private int wt;
     private int ht;

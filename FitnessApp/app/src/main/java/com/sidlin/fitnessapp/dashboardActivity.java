@@ -6,24 +6,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
 
-public class dashboardActivity extends AppCompatActivity {
+public class DashboardActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dashboard);
+        setContentView(R.layout.activity_dashboard);
         //sets click event for bmi activity
         //these will take you to the correct page
         CardView bmi_card = (CardView) findViewById(R.id.bmi_card);
         CardView tdee_card = (CardView) findViewById(R.id.tdee_card);
         CardView one_rep_max_card = (CardView) findViewById(R.id.one_rep_max_card);
         CardView macro_card = (CardView) findViewById(R.id.macro_card);
+        CardView tracker_card = (CardView) findViewById(R.id.tracker_card);
 
         //event to check for click
         bmi_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), bmiActivity.class);
+                Intent i = new Intent(getApplicationContext(), BmiActivity.class);
                 startActivity(i);
             }
         });
@@ -31,7 +32,7 @@ public class dashboardActivity extends AppCompatActivity {
         tdee_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), tdeeActivity.class);
+                Intent i = new Intent(getApplicationContext(), TdeeActivity.class);
                 startActivity(i);
             }
         });
@@ -39,7 +40,7 @@ public class dashboardActivity extends AppCompatActivity {
         one_rep_max_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), maxActivity.class);
+                Intent i = new Intent(getApplicationContext(), MaxActivity.class);
                 startActivity(i);
             }
         });
@@ -47,7 +48,15 @@ public class dashboardActivity extends AppCompatActivity {
         macro_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), macroActivity.class);
+                Intent i = new Intent(getApplicationContext(), MacroActivity.class);
+                startActivity(i);
+            }
+        });
+
+        tracker_card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), TrackerActivity.class);
                 startActivity(i);
             }
         });

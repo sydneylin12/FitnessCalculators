@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="20dp"
+        android:text="Total Calores: 0"
+        android:textColor="#000"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:text="Add Entry"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/del"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:text="Delete Entry"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:text="Clear Entries"
+        android:layout_gravity="center"/>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#000"
+        android:dividerHeight="4px">
+    </ListView>
+</LinearLayout>

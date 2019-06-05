@@ -13,7 +13,7 @@ import com.sidlin.fitnessapp.R;
 import java.util.HashMap;
 import java.util.Map;
 
-public class maxActivity extends AppCompatActivity {
+public class MaxActivity extends AppCompatActivity {
 
     private Button maxBtn;
     private String testLoad, testReps;

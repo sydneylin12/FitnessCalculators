@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.sidlin.fitnessapp.R;
 
-public class tdeeActivity extends AppCompatActivity {
+public class TdeeActivity extends AppCompatActivity {
     private Button tdeeBtn;
     private TextView hb, km, msj;
     private EditText weightTxt, heightTxt, bfTxt, ageTxt;

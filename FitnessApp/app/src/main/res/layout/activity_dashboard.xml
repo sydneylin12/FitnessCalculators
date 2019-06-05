@@ -140,7 +140,7 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/dead" />
+                        android:src="@drawable/deadlift" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -190,8 +190,9 @@
 
             </android.support.v7.widget.CardView>
 
-            <!-- EXTRA CARDVIEWS FOR SCROLLING, UNCOMMENT TO USE
+
             <android.support.v7.widget.CardView
+                android:id="@+id/tracker_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -213,22 +214,22 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/deadlift"
+                        android:src="@drawable/kcal"
                         />
 
                     <TextView
                         android:layout_marginTop="12dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Temp"
+                        android:text="Food Log"
                         android:textSize="18sp"
                         android:textColor="#000000"
-
                         />
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
+            <!-- EXTRA CARDVIEWS FOR SCROLLING, UNCOMMENT TO USE
             <android.support.v7.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

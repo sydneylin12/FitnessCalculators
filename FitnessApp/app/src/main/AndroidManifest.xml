@@ -9,17 +9,19 @@
         android:roundIcon="@mipmap/new_weight_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".dashboardActivity">
+        <activity android:name=".DashboardActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".bmiActivity" />
-        <activity android:name=".tdeeActivity" />
-        <activity android:name=".maxActivity" />
-        <activity android:name=".macroActivity" />
+        <activity android:name=".BmiActivity" />
+        <activity android:name=".TdeeActivity" />
+        <activity android:name=".MaxActivity" />
+        <activity android:name=".MacroActivity" />
+        <activity android:name=".TrackerActivity" />
+        <activity android:name=".PopActivity" android:theme="@style/AppTheme.PopMe"/>
     </application>
 
 </manifest>
