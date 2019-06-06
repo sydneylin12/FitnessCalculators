@@ -10,4 +10,8 @@
         <item>1.9 - Very Heavy Exercise/Physical Job</item>
     </string-array>
     <string name="title_activity_dashboard">dashboardActivity</string>
+    <string name="weight_txt">Weight (lbs.) </string>
+    <string name="hieght_txt">Height (in.) </string>
+    <string name="age_txt">Age </string>
+
 </resources>

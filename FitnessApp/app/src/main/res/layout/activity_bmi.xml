@@ -36,18 +36,18 @@
         android:id="@+id/bmiWeightEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:hint="Weight (lbs.) "
+        android:hint="@string/weight_txt"
         android:inputType="number"
+        android:padding="20dp"
         android:textSize="18sp" />
 
     <EditText
         android:id="@+id/bmiHeightEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:hint="Height (in.) "
+        android:hint="@string/hieght_txt"
         android:inputType="number"
+        android:padding="20dp"
         android:textSize="18sp" />
 
     <Button
@@ -62,9 +62,9 @@
         android:id="@+id/scaleTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
         android:padding="20dp"
-        android:text="Result:"
+        android:text="BMI: "
+        android:textColor="#000000"
         android:textSize="30sp" />
 
 

@@ -15,7 +15,7 @@ public class MacroActivity extends AppCompatActivity {
     private boolean testErrorCheckMacroFilled, testErrorCheckPercent;
     private int percentCarbs, percentFat, percentProtein, cals, total;
     private EditText carbsEditTxt, proteinEditTxt, fatEditTxt, calsEditTxt;
-    private TextView carbsTxtView, proteinTxtView, fatTxtView;
+    private TextView cpfTxtView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +30,7 @@ public class MacroActivity extends AppCompatActivity {
         proteinEditTxt = (EditText) findViewById(R.id.proteinEditTxt);
         fatEditTxt = (EditText) findViewById(R.id.fatEditTxt);
         calsEditTxt = (EditText) findViewById(R.id.calsEditTxt);
-        carbsTxtView = (TextView) findViewById(R.id.carbsTxtView);
-        proteinTxtView = (TextView) findViewById(R.id.proteinTxtView);
-        fatTxtView = (TextView) findViewById(R.id.fatTxtView);
+        cpfTxtView = (TextView) findViewById(R.id.cpfTxtView);
 
         macroBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,27 +75,32 @@ public class MacroActivity extends AppCompatActivity {
                     }
 
                     else{
-                        //get rid of error messages
-                        carbsEditTxt.setError(null);
-                        proteinEditTxt.setError(null);
-                        fatEditTxt.setError(null);
-
-                        percentCarbs = Integer.parseInt(carbsEditTxt.getText().toString());
-                        percentProtein = Integer.parseInt(proteinEditTxt.getText().toString());
-                        percentFat = Integer.parseInt(fatEditTxt.getText().toString());
-                        cals = Integer.parseInt(calsEditTxt.getText().toString());
-
-                        double carbsTotal = (double)cals * percentCarbs * 0.01 / 4;
-                        double proTotal = (double)cals * percentProtein * 0.01 / 4;
-                        double fatTotal = (double)cals * percentFat * 0.01 / 9;
-
-                        //cast all to an int and display
-                        carbsTxtView.setText("Carbohydrate (g): " + (int) carbsTotal);
-                        proteinTxtView.setText("Protein (g): " + (int) proTotal);
-                        fatTxtView.setText("Fat (g): " + (int) fatTotal);
+                        String result = resultMacros();
+                        cpfTxtView.setText(result);
                     }
                 }
             }
         });
+    }
+
+    public String resultMacros(){
+        String rtrn = "";
+        //get rid of error messages
+        carbsEditTxt.setError(null);
+        proteinEditTxt.setError(null);
+        fatEditTxt.setError(null);
+
+        percentCarbs = Integer.parseInt(carbsEditTxt.getText().toString());
+        percentProtein = Integer.parseInt(proteinEditTxt.getText().toString());
+        percentFat = Integer.parseInt(fatEditTxt.getText().toString());
+        cals = Integer.parseInt(calsEditTxt.getText().toString());
+
+        double carbsTotal = (double)cals * percentCarbs * 0.01 / 4;
+        double proTotal = (double)cals * percentProtein * 0.01 / 4;
+        double fatTotal = (double)cals * percentFat * 0.01 / 9;
+
+        //cast all to an int and display
+        rtrn = "C: " + (int)carbsTotal + " P: " + (int)proTotal + " F: " + (int)fatTotal;
+        return rtrn;
     }
 }

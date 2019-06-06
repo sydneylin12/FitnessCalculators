@@ -44,12 +44,12 @@ public class BmiActivity extends AppCompatActivity {
                 /*
                 Test for empty text errors
                  */
-                if (test1.matches("")){
-                    bmiWeightEditText.setError("You must enter a weight.");
+                if (Helper.isEmpty(bmiWeightEditText)){
+                    //bmiWeightEditText.setError("You must enter a weight.");
                     testBmiError = true;
                 }
-                if (test2.matches("")){
-                    bmiHeightEditText.setError("You must enter a height.");
+                if (Helper.isEmpty(bmiHeightEditText)){
+                    //bmiHeightEditText.setError("You must enter a height.");
                     testBmiError = true;
                 }
 

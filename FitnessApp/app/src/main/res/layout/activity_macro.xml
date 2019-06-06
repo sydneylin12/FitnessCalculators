@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal|center"
-    android:orientation="vertical"
-    tools:context="com.example.yanniestea.fitnessapp.com.yanniestea.fitnessapp.macroActivity">
+    android:orientation="vertical">
 
     <EditText
         android:id="@+id/proteinEditTxt"
@@ -14,12 +13,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Protein %"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:padding="20dp"
         android:inputType="number" />
 
     <EditText
@@ -28,12 +23,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Carbohydrate %"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:padding="20dp"
         android:inputType="number" />
 
     <EditText
@@ -42,79 +33,31 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Fat %"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:padding="20dp"
         android:inputType="number" />
 
     <EditText
         android:id="@+id/calsEditTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Calories (TDEE)"
+        android:textAlignment="center"
+        android:padding="20dp"
         android:inputType="number" />
 
     <Button
         android:id="@+id/macroBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="Calculate Macros" />
 
     <TextView
-        android:id="@+id/carbsTxtView"
+        android:id="@+id/cpfTxtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="Carbohydrate (g):"
-        android:textColor="#000000"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/proteinTxtView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Protein (g):"
-        android:textColor="#000000"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/fatTxtView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Fat (g):"
         android:textColor="#000000"
         android:textSize="18sp" />
 

@@ -4,11 +4,10 @@ import android.widget.EditText;
 
 public class Helper {
 
-    public Helper(){
-
-    }
-
-    public boolean isEmpty(EditText e){
+    public static boolean isEmpty(EditText e){
+        /*
+        Checks for an empty editText
+         */
         if(e.getText().toString().matches("")){
             e.setError("This cannot be left empty.");
             return true;
@@ -17,5 +16,10 @@ public class Helper {
             e.setError(null);
             return false;
         }
+    }
+
+    public static void set(EditText e){
+        //test method
+        e.setError("LOL");
     }
 }
