@@ -4,17 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal|center"
+    android:gravity="center_horizontal"
     android:orientation="vertical">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:paddingRight="20dp"
+            android:src="@drawable/bench_logo_no_background" />
+
+        <TextView
+            android:id="@+id/txtdashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Fitness Calculators"
+            android:textColor="@color/whiteDefault"
+            android:paddingLeft="20dp"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
     <EditText
-        android:id="@+id/proteinEditTxt"
+        android:id="@+id/proEditTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Protein %"
         android:textAlignment="center"
-        android:padding="20dp"
+        android:layout_margin="20dp"
         android:inputType="number" />
 
     <EditText
@@ -24,7 +48,7 @@
         android:ems="10"
         android:hint="Carbohydrate %"
         android:textAlignment="center"
-        android:padding="20dp"
+        android:layout_margin="20dp"
         android:inputType="number" />
 
     <EditText
@@ -34,7 +58,7 @@
         android:ems="10"
         android:hint="Fat %"
         android:textAlignment="center"
-        android:padding="20dp"
+        android:layout_margin="20dp"
         android:inputType="number" />
 
     <EditText
@@ -44,21 +68,24 @@
         android:ems="10"
         android:hint="Calories (TDEE)"
         android:textAlignment="center"
-        android:padding="20dp"
+        android:layout_margin="20dp"
         android:inputType="number" />
 
     <Button
         android:id="@+id/macroBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:theme="@style/MyButton"
+        android:layout_margin="20dp"
         android:text="Calculate Macros" />
 
     <TextView
         android:id="@+id/cpfTxtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Carbohydrate (g):"
+        android:layout_margin="20dp"
+        android:text="C: N/A P: N/A F: N/A:"
         android:textColor="#000000"
-        android:textSize="18sp" />
+        android:textSize="30sp" />
 
 </LinearLayout>

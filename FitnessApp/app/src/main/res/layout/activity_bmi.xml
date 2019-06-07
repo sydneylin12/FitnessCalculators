@@ -47,14 +47,14 @@
         android:layout_height="wrap_content"
         android:hint="@string/hieght_txt"
         android:inputType="number"
-        android:padding="20dp"
+        android:layout_margin="20dp"
         android:textSize="18sp" />
 
     <Button
         android:id="@+id/bmiBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="20dp"
+        android:layout_margin="20dp"
         android:theme="@style/MyButton"
         android:text="Calculate BMI" />
 
@@ -62,7 +62,7 @@
         android:id="@+id/scaleTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="20dp"
+        android:layout_margin="20dp"
         android:text="BMI: "
         android:textColor="#000000"
         android:textSize="30sp" />

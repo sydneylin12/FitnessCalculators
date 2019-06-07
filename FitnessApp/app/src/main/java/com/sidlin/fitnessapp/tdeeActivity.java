@@ -12,12 +12,10 @@ import com.sidlin.fitnessapp.R;
 
 public class TdeeActivity extends AppCompatActivity {
     private Button tdeeBtn;
-    private TextView hb, km, msj;
+    private TextView tdeeTxt;
     private EditText weightTxt, heightTxt, bfTxt, ageTxt;
-    private String testWt, testHt, testBf, testAge;
     private boolean testErrorCheckTdee;
     private double resultHb, resultKm, resultMsj;
-    private String bmrHb, bmrKm, bmrMsj;
     private int ht, wt, bf, age;
 
     @Override
@@ -31,21 +29,13 @@ public class TdeeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                hb = (TextView) findViewById(R.id.hbTxt);
-                km = (TextView) findViewById(R.id.kmTxt);
-                msj = (TextView) findViewById(R.id.msjTxt);
+                tdeeTxt = (TextView) findViewById(R.id.tdeeTxt);
 
                 //user filled-in texts
                 weightTxt = (EditText) findViewById(R.id.weightTxt);
                 heightTxt = (EditText) findViewById(R.id.heightTxt);
                 bfTxt = (EditText) findViewById(R.id.bfTxt);
                 ageTxt = (EditText) findViewById(R.id.ageTxt);
-
-                //test strings to check for errors
-                testWt = weightTxt.getText().toString();
-                testHt = heightTxt.getText().toString();
-                testBf = bfTxt.getText().toString();
-                testAge = ageTxt.getText().toString();
 
                 //returns true if errors are present
                 testErrorCheckTdee = false;
@@ -59,7 +49,7 @@ public class TdeeActivity extends AppCompatActivity {
                     multiplier = 1.0;
                 }
 
-                if (multiplierCheck.matches("1.2 - Sedentary")){
+                else if (multiplierCheck.matches("1.2 - Sedentary")){
                     multiplier = 1.2;
                 }
 
@@ -79,23 +69,16 @@ public class TdeeActivity extends AppCompatActivity {
                     multiplier = 1.9;
                 }
 
-                if (testWt.matches("")){
-                    weightTxt.setError("You must enter a weight.");
+                if (Helper.isEmpty(weightTxt)){
                     testErrorCheckTdee = true;
                 }
-
-                if (testAge.matches("")){
-                    ageTxt.setError("You must enter an age.");
+                if (Helper.isEmpty(ageTxt)){
                     testErrorCheckTdee = true;
                 }
-
-                if (testBf.matches("")){
-                    bfTxt.setError("You must enter a body fat %.");
+                if (Helper.isEmpty(bfTxt)){
                     testErrorCheckTdee = true;
                 }
-
-                if (testHt.matches("")){
-                    heightTxt.setError("You must enter a height.");
+                if (Helper.isEmpty(heightTxt)){
                     testErrorCheckTdee = true;
                 }
 
@@ -133,11 +116,6 @@ public class TdeeActivity extends AppCompatActivity {
                         testErrorTdeeNumbers = true;
                     }
 
-                    if (testAge.contains(".")){
-                        ageTxt.setError("Age must be a whole number.");
-                        testErrorTdeeNumbers = true;
-                    }
-
                     if (testErrorTdeeNumbers == false) {
 
                         ageTxt.setError(null);
@@ -150,12 +128,9 @@ public class TdeeActivity extends AppCompatActivity {
                         resultMsj = ((10 * wtKg) + (6.25 * htCm) - (5 * age) + 5) * multiplier;
 
                         //print with 2 decimal places
-                        bmrHb = String.format("%.2f", resultHb);
-                        bmrKm = String.format("%.2f", resultKm);
-                        bmrMsj = String.format("%.2f", resultMsj);
-                        hb.setText("Harris-Benedict: " + bmrHb);
-                        km.setText("Katch-McCardle: " + bmrKm);
-                        msj.setText("Mifflin-St. Jeor: " + bmrMsj);
+                        double total = (resultHb + resultKm + resultMsj)/3;
+                        String end = String.format("%.2f", total);
+                        tdeeTxt.setText("TDEE: " + end);
                     }
                 }
 

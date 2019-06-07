@@ -12,9 +12,9 @@ import com.sidlin.fitnessapp.R;
 public class MacroActivity extends AppCompatActivity {
 
     private Button macroBtn;
-    private boolean testErrorCheckMacroFilled, testErrorCheckPercent;
+    private boolean testErrorCheckMacroFilled;
     private int percentCarbs, percentFat, percentProtein, cals, total;
-    private EditText carbsEditTxt, proteinEditTxt, fatEditTxt, calsEditTxt;
+    private EditText carbsEditTxt, proEditTxt, fatEditTxt, calsEditTxt;
     private TextView cpfTxtView;
 
     @Override
@@ -27,7 +27,7 @@ public class MacroActivity extends AppCompatActivity {
         Initialize data members that are a part of the layout
          */
         carbsEditTxt = (EditText) findViewById(R.id.carbsEditTxt);
-        proteinEditTxt = (EditText) findViewById(R.id.proteinEditTxt);
+        proEditTxt = (EditText) findViewById(R.id.proEditTxt);
         fatEditTxt = (EditText) findViewById(R.id.fatEditTxt);
         calsEditTxt = (EditText) findViewById(R.id.calsEditTxt);
         cpfTxtView = (TextView) findViewById(R.id.cpfTxtView);
@@ -37,43 +37,35 @@ public class MacroActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //checks percentage
                 testErrorCheckMacroFilled = false;
-                testErrorCheckPercent = false;
-
                 //checks for no user input
-                if (carbsEditTxt.getText().toString().matches("")){
-                    carbsEditTxt.setError("You must enter a % of carbohydrates.");
+                if (Helper.isEmpty(carbsEditTxt)){
                     testErrorCheckMacroFilled = true;
                 }
-
-                if (proteinEditTxt.getText().toString().matches("")){
-                    proteinEditTxt.setError("You must enter a % of protein.");
+                if(Helper.isEmpty(proEditTxt)){
                     testErrorCheckMacroFilled = true;
                 }
-
-                if (fatEditTxt.getText().toString().matches("")){
-                    fatEditTxt.setError("You must enter a % of fat.");
+                if(Helper.isEmpty(fatEditTxt)){
                     testErrorCheckMacroFilled = true;
                 }
-
-                if (calsEditTxt.getText().toString().matches("")){
-                    calsEditTxt.setError("You must enter a TDEE.");
+                if(Helper.isEmpty(calsEditTxt)){
                     testErrorCheckMacroFilled = true;
                 }
 
                 if (testErrorCheckMacroFilled == false) {
                     //happens when the macro percents are filled in but not totaled yet
                     percentCarbs = Integer.parseInt(carbsEditTxt.getText().toString());
-                    percentProtein = Integer.parseInt(proteinEditTxt.getText().toString());
+                    percentProtein = Integer.parseInt(proEditTxt.getText().toString());
                     percentFat = Integer.parseInt(fatEditTxt.getText().toString());
                     total = percentCarbs + percentProtein + percentFat;
 
                     if (total != 100) {
                         carbsEditTxt.setError("Percentages must add to 100%.");
-                        proteinEditTxt.setError("Percentages must add to 100%.");
+                        proEditTxt.setError("Percentages must add to 100%.");
                         fatEditTxt.setError("Percentages must add to 100%.");
-                        testErrorCheckPercent = true;
                     }
-
+                    else if(Double.parseDouble(calsEditTxt.getText().toString()) < 0){
+                        calsEditTxt.setError("Calories cannot be negative.");
+                    }
                     else{
                         String result = resultMacros();
                         cpfTxtView.setText(result);
@@ -87,11 +79,11 @@ public class MacroActivity extends AppCompatActivity {
         String rtrn = "";
         //get rid of error messages
         carbsEditTxt.setError(null);
-        proteinEditTxt.setError(null);
+        proEditTxt.setError(null);
         fatEditTxt.setError(null);
 
         percentCarbs = Integer.parseInt(carbsEditTxt.getText().toString());
-        percentProtein = Integer.parseInt(proteinEditTxt.getText().toString());
+        percentProtein = Integer.parseInt(proEditTxt.getText().toString());
         percentFat = Integer.parseInt(fatEditTxt.getText().toString());
         cals = Integer.parseInt(calsEditTxt.getText().toString());
 

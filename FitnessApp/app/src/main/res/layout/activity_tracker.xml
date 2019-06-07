@@ -21,6 +21,7 @@
         android:layout_width="160dp"
         android:layout_height="60dp"
         android:text="Add Entry"
+        android:theme="@style/MyButton"
         android:layout_gravity="center"/>
 
     <Button
@@ -28,6 +29,7 @@
         android:layout_width="160dp"
         android:layout_height="60dp"
         android:text="Delete Entry"
+        android:theme="@style/MyButton"
         android:layout_gravity="center"/>
 
     <Button
@@ -35,6 +37,7 @@
         android:layout_width="160dp"
         android:layout_height="60dp"
         android:text="Clear Entries"
+        android:theme="@style/MyButton"
         android:layout_gravity="center"/>
 
     <ListView

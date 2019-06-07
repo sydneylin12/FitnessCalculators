@@ -4,9 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_vertical|center_horizontal"
-    android:orientation="vertical"
-    tools:context="com.example.yanniestea.fitnessapp.com.yanniestea.fitnessapp.maxActivity">
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:paddingRight="20dp"
+            android:src="@drawable/bench_logo_no_background" />
+
+        <TextView
+            android:id="@+id/txtdashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Fitness Calculators"
+            android:textColor="@color/whiteDefault"
+            android:paddingLeft="20dp"
+            android:textSize="24sp" />
+    </RelativeLayout>
 
     <EditText
         android:id="@+id/loadTxt"
@@ -16,34 +39,33 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Load (lbs.)"
+        android:layout_margin="20dp"
         android:inputType="number" />
 
     <EditText
         android:id="@+id/repTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Reps (1-10)"
+        android:layout_margin="20dp"
         android:inputType="number" />
 
     <Button
         android:id="@+id/maxBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
+        android:theme="@style/MyButton"
+        android:layout_margin="20dp"
         android:text="Calculate" />
 
     <TextView
         android:id="@+id/resultMaxTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Estimated 1RM:"
+        android:layout_margin="20dp"
+        android:text="Estimated 1RM: N/A"
         android:textColor="#000000"
-        android:textSize="36sp" />
+        android:textSize="30sp" />
 
 </LinearLayout>
